@@ -1,19 +1,20 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
+import QuoteFactory from './src/QuoteFactory.js' 
 
 export default class App extends React.Component {
-  getRandomQuote(){
-    return "unga bunga!"
-  }
-
   render() {
     let quote = "life is good"
-    console.log(this.getRandomQuote())
+
+    let factory = new QuoteFactory()
+    console.log(factory)
+
+    console.log(QuoteFactory)
     return (
       <View style={styles.container}>
         <Text>{quote}</Text>
       </View>
-    );
+    )
   }
 }
 
@@ -24,4 +25,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-});
+})
