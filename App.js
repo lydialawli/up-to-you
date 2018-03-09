@@ -13,10 +13,15 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <Text>{quote}</Text>
+        <Text style={styles.textSmall}>
+      (I am just testing here, don't judge)
+        </Text>
       </View>
     )
+    
   }
 }
+
 
 const styles = StyleSheet.create({
   container: {
@@ -24,5 +29,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    fontSize: 20,
   },
+  textSmall: {
+    fontSize: 10,
+    color: "green",
+  }
 })
