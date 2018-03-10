@@ -7,7 +7,7 @@ export default class App extends React.Component {
   constructor(){
     super()
     this.state = {
-      quote : "I will wise you if you click me"
+      quote : "click me if you want to be wiser"
     }
   }
 
