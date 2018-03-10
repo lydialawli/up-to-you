@@ -1,26 +1,42 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, Button} from 'react-native'
 import QuoteFactory from './src/QuoteFactory.js' 
 
 export default class App extends React.Component {
+
+  constructor(){
+    super()
+    this.state = {
+      quote : "I will wise you if you click me"
+    }
+  }
+
+  onPressed=()=>{
+    let newquote = QuoteFactory.getRandomQuote()
+    this.setState({quote:newquote}) 
+  }
+
   render() {
-    let quote = "life is good"
 
-    let factory = new QuoteFactory()
-    console.log(factory)
-
-    console.log(QuoteFactory)
     return (
       <View style={styles.container}>
-        <Text>{quote}</Text>
+
+        <Button
+          title= {this.state.quote}
+          style= ""
+          color= "#e9967a"
+          onPress= {this.onPressed}>
+        </Button>
+    
         <Text style={styles.textSmall}>
-      (I am just testing here, don't judge)
+          (I am just testing here, don't judge)
         </Text>
+
       </View>
     )
+  
   }
 }
-
 
 const styles = StyleSheet.create({
   container: {
@@ -28,7 +44,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-    fontSize: 20,
   },
   textSmall: {
     fontSize: 10,
