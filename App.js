@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, View, Button} from 'react-native'
 import QuoteFactory from './src/QuoteFactory.js' 
+import PresentationalComponent from './src/PresentationalComponent.js';
 
 export default class App extends React.Component {
 
@@ -19,39 +20,23 @@ export default class App extends React.Component {
   render() {
 
     return (
-      <View style={{
-        flex: 1,
-      }}>
-        <View style={{flex: 1, backgroundColor: 'powderblue'}} />
-        <View style={{flex: 2, backgroundColor: 'skyblue'}} />
-        <View style={{flex: 3, backgroundColor: 'steelblue'}} />
-
-        <Button
-          title= {this.state.quote}
-          style= ""
-          color= "#e9967a"
-          onPress= {this.onPressed}>
-        </Button>
-    
-        <Text style={styles.textSmall}>
-          (I am just testing here, don't judge)
-        </Text>
-
+      <View style = {styles.container}>    
+        <PresentationalComponent
+          quote = {this.state.quote} 
+          onPressed = {this.onPressed}/>
       </View>
     )
   
   }
 }
 
+
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#40f',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  textSmall: {
-    fontSize: 10,
-    color: "green",
   }
 })
