@@ -26,16 +26,16 @@ export default class PresentationalComponent extends React.Component {
             <View style={styles.container}>
                 <View style={styles.bg1} >
                     <Text style={styles.textSmall}>
-                        (I am just testing here, don't judge)
+                        {this.props.quote}
                     </Text>
                 </View>
                 <View style={styles.bg2} >
                     <Text style={styles.textSmall}>
-                        (I am just testing here, don't judge)
+                        {this.props.quote}
                     </Text>
                 </View><View style={styles.bg3} >
                     <Text style={styles.textSmall}>
-                        (I am just testing here, don't judge)
+                        {this.props.quote}
                     </Text>
                 </View>
 
@@ -46,7 +46,7 @@ export default class PresentationalComponent extends React.Component {
                 </Button>
     
                 <Text style={styles.textSmall}>
-                    (I am just testing here, don't judge)
+                    {this.props.quote}
                 </Text>
 
             </View>
