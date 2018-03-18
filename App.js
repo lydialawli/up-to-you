@@ -1,7 +1,8 @@
 import React from 'react'
-import { StyleSheet, Text, View, Button} from 'react-native'
+import { StyleSheet, Text, View, Button, Images} from 'react-native'
 import QuoteFactory from './src/QuoteFactory.js' 
-import PresentationalComponent from './src/PresentationalComponent.js';
+import PresentationalComponent from './src/PresentationalComponent.js'
+import ImagesExamples from './src/ImagesExamples.js'
 
 export default class App extends React.Component {
 
@@ -24,16 +25,22 @@ export default class App extends React.Component {
         <PresentationalComponent
           quote = {this.state.quote} 
           onPressed = {this.onPressed}/>
+        <ImagesExamples/>
       </View>
     )
-  
   }
+}
+
+const uniPerson = () => {
+  return (
+     <ImagesExamples/>
+  )
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#40f',
+    backgroundColor: 'deepskyblue',
     alignItems: 'center',
     justifyContent: 'center',
   }
