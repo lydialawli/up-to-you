@@ -8,8 +8,10 @@ export default class Coin extends React.Component {
     {
         if(value === 0)
             return  (<Image style = {{width:200, height:200}} source = {require("./img/coin-heads.png")} />)
-        else
+        else if(value ===1)
             return  (<Image style = {{width:200, height:200}} source = {require("./img/coin-tails.png")} />)
+        else if(value ===2)
+            return  (<Image style = {{width:200, height:200}} source = {require("./img/coin-fliping.png")} />)
     }
     
     render() {
