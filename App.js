@@ -3,23 +3,23 @@ import { StyleSheet, Text, View, Button, Images} from 'react-native'
 import ImagesExamples from './src/ImagesExamples.js'
 export default class App extends React.Component {
 
+  state = {
+    coin: <ImagesExamples/>
 
+  }
 
   render() {
 
     return (
       <View style = {styles.container}>    
-        <ImagesExamples/>
+        {this.state.coin}
+        
       </View>
     )
   }
 }
 
-const coin = () => {
-  return (
-     <ImagesExamples/>
-  )
-}
+
 
 const styles = StyleSheet.create({
   container: {
