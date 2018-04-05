@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View, Button, Image} from 'react-native'
+import { StyleSheet, Text, View, TouchableWithoutFeedback, Image} from 'react-native'
 
 
 export default class Coin extends React.Component {
@@ -15,9 +15,9 @@ export default class Coin extends React.Component {
     render() {
         
         return (
-        <View>    
+        <TouchableWithoutFeedback onPress= {this.props.onPress}>    
            {this.getImageByValue(this.props.value)}
-        </View>
+        </TouchableWithoutFeedback>
         )
     }
 }
