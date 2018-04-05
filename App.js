@@ -13,12 +13,27 @@ constructor(props)
   }
 }
 
-  onCoinPressed=()=>
+  startWaitingMode=()=>
+  {
+    this.setState({
+      currentValue : 2
+    })
+
+    let that = this
+
+    setTimeout(()=>{this.setResult()}, 2000);
+  }
+
+  setResult()
   {
     this.setState({
       currentValue : Math.round(Math.random())
     })
+  }
 
+  onCoinPressed=()=>
+  {
+    this.startWaitingMode()
     console.log(this.state.currentValue)
   }
 
