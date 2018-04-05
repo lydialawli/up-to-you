@@ -4,11 +4,30 @@ import Coin from './src/coin.js'
 
 export default class App extends React.Component {
 
+constructor(props)
+{
+  super(props)
+
+  this.state={
+    currentValue:0
+  }
+}
+
+  onCoinPressed=()=>
+  {
+    this.setState({
+      currentValue : Math.round(Math.random())
+    })
+
+    console.log(this.state.currentValue)
+  }
+
   render() {
 
     return (
-      <View style = {styles.container}>    
-        <Coin value = {Math.floor(Math.random())} />
+      <View  style = {styles.container}>    
+        <Coin onPress= {this.onCoinPressed} value = {this.state.currentValue} />
+       
       </View>
     )
   }
