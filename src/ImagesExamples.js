@@ -1,8 +1,8 @@
 import React from 'react'
 import { Image } from 'react-native'
 
-const uniPerson = () => (
-    <Image style = {{flex:1}} source = {require("./img/uniPerson.png")} />
+const coin = () => (
+    <Image style = {{flex:1}} source = {require("./img/coin-heads.png")} />
 )
 
-export default uniPerson
+export default coin
