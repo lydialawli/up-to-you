@@ -8,7 +8,7 @@ export default class App extends React.Component {
   render() {
 
     return (
-      <View style = {styles.container}>     
+      <View style = {styles.container}>    
         <ImagesExamples/>
       </View>
     )
@@ -23,7 +23,7 @@ const coin = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 0,
+    flex: 1,
     backgroundColor: 'deepskyblue',
     alignItems: 'center',
     justifyContent: 'center',
