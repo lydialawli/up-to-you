@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, View, Button, Image} from 'react-native'
 import Coin from './src/coin.js'
+import Dice from './src/dice.js'
 
 export default class App extends React.Component {
 
@@ -40,7 +41,7 @@ constructor(props)
     return (
       <View  style = {styles.container}>    
         <Coin onPress= {this.onCoinPressed} value = {this.state.currentValue} />
-       
+        <Dice onPress= {this.onCoinPressed} value = {this.state.currentValue} />
       </View>
     )
   }
