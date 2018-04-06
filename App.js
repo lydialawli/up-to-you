@@ -19,8 +19,6 @@ constructor(props)
       currentValue : 2
     })
 
-    let that = this
-
     setTimeout(()=>{this.setResult()}, 2000);
   }
 
