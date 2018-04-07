@@ -1,7 +1,8 @@
 import React from 'react'
 import { StyleSheet, Text, View, Button, Image} from 'react-native'
-import Coin from './src/coin.js'
-import Dice from './src/dice.js'
+import Coin from './src/coin1.js'
+import Dice from './src/dice1.js'
+import imageHandler from './src/image-handler.js'
 
 var diceSides = [
   require('./src/img/dice-1.png'),
@@ -9,7 +10,12 @@ var diceSides = [
   require('./src/img/dice-3.png'),
   require('./src/img/dice-4.png'),
   require('./src/img/dice-5.png'),
-  require('./src/img/dice-6.png'),
+]
+
+var coinSides = [
+  require('./src/img/coin-heads.png'),
+  require('./src/img/coin-tails.png'),
+  require('./src/img/coin-fliping.png')
 ]
 
 export default class App extends React.Component {
@@ -49,7 +55,7 @@ constructor(props)
 
     return (
       <View  style = {styles.container}>    
-        <Coin onPress= {this.onCoinPressed} value = {this.state.currentValue} />
+        <Coin onPress= {this.onCoinPressed} value = {this.state.currentValue} options={coinSides}/>
         <Dice onPress= {this.onCoinPressed} value = {this.state.currentValue} options={diceSides}/>
       </View>
     )
