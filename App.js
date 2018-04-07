@@ -1,8 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text, View, Button, Image} from 'react-native'
-import Coin from './src/coin1.js'
-import Dice from './src/dice1.js'
-import imageHandler from './src/image-handler.js'
+import ImageHandler from './src/ImageHandler.js'
 
 var diceSides = [
   require('./src/img/dice-1.png'),
@@ -41,7 +39,7 @@ constructor(props)
   setResult()
   {
     this.setState({
-      currentValue : Math.round(Math.random())
+      currentValue : Math.floor(Math.random()*diceSides.length)
     })
   }
 
@@ -55,8 +53,8 @@ constructor(props)
 
     return (
       <View  style = {styles.container}>    
-        <Coin onPress= {this.onCoinPressed} value = {this.state.currentValue} options={coinSides}/>
-        <Dice onPress= {this.onCoinPressed} value = {this.state.currentValue} options={diceSides}/>
+        <ImageHandler onPress= {this.onCoinPressed} value = {this.state.currentValue} options={coinSides}/>
+        <ImageHandler onPress= {this.onCoinPressed} value = {this.state.currentValue} options={diceSides}/>
       </View>
     )
   }
