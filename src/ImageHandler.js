@@ -4,17 +4,11 @@ import { StyleSheet, Text, View, TouchableWithoutFeedback, Image} from 'react-na
 
 export default class Dice extends React.Component {
 
-    
-    getImageByValue = (value) =>
-    {
-        return <Image style = {{width:200, height:200}} source = {this.props.options[value]} />
-    }
-    
     render() {
         
         return (
-            <TouchableWithoutFeedback onPress= {this.props.onPress}>    
-                {this.getImageByValue(this.props.value)}
+            <TouchableWithoutFeedback disabled={this.props.disabled} onPress= {this.props.onPress}>    
+                <Image style = {{width:200, height:200}} source = {this.props.image} />
             </TouchableWithoutFeedback>
         )
     }
