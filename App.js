@@ -8,6 +8,8 @@ var diceSides = [
   require('./src/img/dice-3.png'),
   require('./src/img/dice-4.png'),
   require('./src/img/dice-5.png'),
+  require('./src/img/dice-6.png'),
+  require('./src/img/testing.gif')
 ]
 
 var coinSides = [
@@ -21,40 +23,64 @@ export default class App extends React.Component {
 constructor(props)
 {
   super(props)
-
   this.state={
-    currentValue:0
+    currentCoinValue:0,
+    currentDiceValue:2
   }
 }
 
-  startWaitingMode=()=>
+  startWaitingModeCoin=()=>
   {
     this.setState({
-      currentValue : 2
+      currentCoinValue : 2
     })
 
-    setTimeout(()=>{this.setResult()}, 2000);
+    setTimeout(()=>{this.setResultCoin()}, 1000);
   }
 
-  setResult()
+  setResultCoin()
   {
     this.setState({
-      currentValue : Math.floor(Math.random()*diceSides.length)
+      currentCoinValue : Math.round(Math.random())
     })
   }
 
   onCoinPressed=()=>
   {
-    this.startWaitingMode()
-    console.log(this.state.currentValue)
+    this.startWaitingModeCoin()
+    console.log(this.state.currentCoinValue)
   }
- 
+
+
+
+  
+  startWaitingModeDice=()=>
+  {
+    this.setState({
+      currentDiceValue : 6
+    })
+    setTimeout(()=>{this.setResultDice()}, 1000);
+  }
+
+  setResultDice()
+  {
+    this.setState({
+      currentDiceValue : Math.floor(Math.random()*6)
+    })
+  }
+  
+  onDicePressed=()=>
+  {
+    this.startWaitingModeDice()
+    console.log(this.state.currentDiceValue)
+  }
+
   render() {
 
     return (
       <View  style = {styles.container}>    
-        <ImageHandler onPress= {this.onCoinPressed} value = {this.state.currentValue} options={coinSides}/>
-        <ImageHandler onPress= {this.onCoinPressed} value = {this.state.currentValue} options={diceSides}/>
+        <ImageHandler onPress= {this.onCoinPressed} value = {this.state.currentCoinValue} options={coinSides}/>
+        <ImageHandler onPress= {this.onDicePressed} value = {this.state.currentDiceValue} options={diceSides}/>
       </View>
     )
   }
