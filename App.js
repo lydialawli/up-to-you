@@ -64,7 +64,7 @@ constructor(props)
     this.setState({
       currentDiceImage : diceProperties.waitingDiceImage,
     })
-    setTimeout(()=>{this.setResultDice()}, 2000);
+    setTimeout(()=>{this.setResultDice()}, 1500);
   }
 
   setResultDice()
