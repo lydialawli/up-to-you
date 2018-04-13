@@ -3,24 +3,25 @@ import { StyleSheet, Text, View, Button, Image} from 'react-native'
 import ImageHandler from './src/ImageHandler.js'
 
 
+
 let diceProperties ={
   faces: [
-      require('./src/img/dice-1.png'),
-      require('./src/img/dice-2.png'),
-      require('./src/img/dice-3.png'),
-      require('./src/img/dice-4.png'),
-      require('./src/img/dice-5.png'),
-      require('./src/img/dice-6.png'),    
+      require('./src/dice-img/dice-1.png'),
+      require('./src/dice-img/dice-2.png'),
+      require('./src/dice-img/dice-3.png'),
+      require('./src/dice-img/dice-4.png'),
+      require('./src/dice-img/dice-5.png'),
+      require('./src/dice-img/dice-6.png'),    
   ],
-  waitingDiceImage: require('./src/img/testing.gif')
+  waitingDiceImage: require('./src/dice-img/dice-rolling.gif')
 }
 
 let coinProperties ={
   faces: [
-      require('./src/img/coin-heads.png'),
-      require('./src/img/coin-tails.png')
+      require('./src/coin-img/coin-heads.png'),
+      require('./src/coin-img/coin-tails.png')
     ],
-  waitingCoinImage: require('./src/img/coin-fliping.png')
+  waitingCoinImage: require('./src/coin-img/coin-fliping.gif')
 }
 
 
@@ -31,7 +32,8 @@ constructor(props)
   super(props)
   this.state={
     currentCoinImage:coinProperties.faces[0],
-    currentDiceImage: diceProperties.faces[2]
+    currentDiceImage: diceProperties.faces[2],
+    disabled: true
   }
 }
 
@@ -56,21 +58,19 @@ constructor(props)
     console.log(this.state.currentCoinImage)
   }
 
-
-
   
   startWaitingModeDice=()=>
   {
     this.setState({
-      currentDiceImage : diceProperties.waitingDiceImage
+      currentDiceImage : diceProperties.waitingDiceImage,
     })
-    setTimeout(()=>{this.setResultDice()}, 1000);
+    setTimeout(()=>{this.setResultDice()}, 2000);
   }
 
   setResultDice()
   {
     this.setState({
-      currentDiceImage : diceProperties.faces[Math.floor(Math.random()*6)]
+      currentDiceImage : diceProperties.faces[Math.floor(Math.random()*6)],
     })
   }
   
@@ -78,6 +78,13 @@ constructor(props)
   {
     this.startWaitingModeDice()
     console.log(this.state.currentDiceImage)
+    
+  }
+
+  disabling=()=>{
+    if (this.currentDiceImage === diceProperties.waitingDiceImage) 
+        {this.setState({disabled: true})}
+    else {this.setState({disabled: false})}
   }
 
   render() {
@@ -85,7 +92,7 @@ constructor(props)
     return (
       <View  style = {styles.container}>    
         <ImageHandler onPress= {this.onCoinPressed} image = {this.state.currentCoinImage}/>
-        <ImageHandler onPress= {this.onDicePressed} image = {this.state.currentDiceImage}/>
+        <ImageHandler onPress= {this.onDicePressed} image = {this.state.currentDiceImage} disabled = {this.state.disabling}/>
       </View>
     )
   }
