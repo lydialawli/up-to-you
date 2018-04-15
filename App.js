@@ -33,14 +33,15 @@ constructor(props)
   this.state={
     currentCoinImage:coinProperties.faces[0],
     currentDiceImage: diceProperties.faces[2],
-    disabled: true
+    disabled: false
   }
 }
 
   startWaitingModeCoin=()=>
   {
     this.setState({
-      currentCoinImage : coinProperties.waitingCoinImage
+      currentCoinImage : coinProperties.waitingCoinImage,
+      disabled: true
     })
     setTimeout(()=>{this.setResultCoin()}, 1000);
   }
@@ -48,7 +49,8 @@ constructor(props)
   setResultCoin()
   {
     this.setState({
-      currentCoinImage : coinProperties.faces[Math.round(Math.random())]
+      currentCoinImage : coinProperties.faces[Math.round(Math.random())],
+      disabled: false,
     })
   }
  
@@ -63,6 +65,7 @@ constructor(props)
   {
     this.setState({
       currentDiceImage : diceProperties.waitingDiceImage,
+      disabled : true,
     })
     setTimeout(()=>{this.setResultDice()}, 1500);
   }
@@ -71,28 +74,23 @@ constructor(props)
   {
     this.setState({
       currentDiceImage : diceProperties.faces[Math.floor(Math.random()*6)],
+      disabled : false
     })
   }
   
   onDicePressed=()=>
   {
     this.startWaitingModeDice()
-    console.log(this.state.currentDiceImage)
-    
+    console.log(this.state.currentDiceImage)    
   }
 
-  disabling=()=>{
-    if (this.currentDiceImage === diceProperties.waitingDiceImage) 
-        {this.setState({disabled: true})}
-    else {this.setState({disabled: false})}
-  }
 
   render() {
 
     return (
       <View  style = {styles.container}>    
-        <ImageHandler onPress= {this.onCoinPressed} image = {this.state.currentCoinImage}/>
-        <ImageHandler onPress= {this.onDicePressed} image = {this.state.currentDiceImage} disabled = {this.state.disabling}/>
+        <ImageHandler onPress= {this.onCoinPressed} image = {this.state.currentCoinImage} disabled = {this.state.disabled}/>
+        <ImageHandler onPress= {this.onDicePressed} image = {this.state.currentDiceImage} disabled = {this.state.disabled}/>
       </View>
     )
   }
