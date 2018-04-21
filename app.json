@@ -1,11 +1,11 @@
 {
   "expo": {
     "name": "UpToYou",
-    "slug": "expo.io/@lydia/up-to-you",
+    "slug": "up-to-you",
     "icon": "./src/app-icon.png",
     "sdkVersion": "25.0.0",
     "privacy": "public",
-    "description":"If you can't decide something, let this app help you"
+    "description": "If you can't decide something, let this app help you"
   },
 
   "android": {
