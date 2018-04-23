@@ -2,7 +2,7 @@ import React from 'react'
 import { StyleSheet, Text, View, TouchableWithoutFeedback, Image} from 'react-native'
 
 
-export default class Dice extends React.Component {
+export default class extends React.Component {
 
     render() {
         

@@ -1,8 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, View, Button, Image, Dimensions} from 'react-native'
 import ImageHandler from './src/ImageHandler.js'
-
-
+import ScreenOriented from './src/ScreenOriented.js'
 
 let diceProperties ={
   faces: [
@@ -35,8 +34,16 @@ constructor(props)
   this.state={
     currentCoinImage:coinProperties.faces[0],
     currentDiceImage: diceProperties.faces[2],
-    disabled: false
+    disabled: false,
+    orientation: ScreenOriented.isPortrait() ? 'portrait' : 'landscape'
   }
+
+  Dimensions.addEventListener('change', () => {
+    this.setState({
+        isPortrait: ScreenOriented.isPortrait(),
+        orientation: ScreenOriented.isPortrait() ? 'portrait' : 'landscape'
+    })
+  })
 }
 
   startWaitingModeCoin=()=>
@@ -88,16 +95,23 @@ constructor(props)
 
   getStyle=(isPortrait)=>
   {
-    let flexDirectionNew = 'row'
-    if(isPortrait)
-      flexDirectionNew = 'column'
-
-    return {
+    if(isPortrait){
+      return{
         flex: 1,
-        flexDirection: flexDirectionNew, 
+        flexDirection: 'column', 
+        backgroundColor: 'darksalmon',
+        alignItems: 'center',
+        justifyContent: 'space-around'
+      }
+    }
+    else{
+      return {
+        flex: 1,
+        flexDirection: 'row', 
         backgroundColor: 'darksalmon',
         alignItems: 'center',
         justifyContent: 'space-around',
+      }
     }
   }
 
@@ -105,9 +119,13 @@ constructor(props)
   render() {
 
     return (
-      <View  style = {this.getStyle(true)}>    
+      <View  style = {this.getStyle(this.state.isPortrait)}>   
         <ImageHandler onPress= {this.onCoinPressed} image = {this.state.currentCoinImage} disabled = {this.state.disabled}/>
         <ImageHandler onPress= {this.onDicePressed} image = {this.state.currentDiceImage} disabled = {this.state.disabled}/>
+        <Text>
+          isPortrait = {ScreenOriented.isPortrait() ? 'true\n' : 'false\n'}
+          isLandscape = {ScreenOriented.isLandscape() ? 'true\n' : 'false\n'}
+        </Text>
       </View>
     )
   }
@@ -122,3 +140,13 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
   }
 })
+
+
+
+/*
+<Text>
+Dimensions = {JSON.stringify(Dimensions.get('screen'))}{'\n'}
+isPortrait = {ScreenOriented.isPortrait() ? 'true\n' : 'false\n'}
+isLandscape = {ScreenOriented.isLandscape() ? 'true\n' : 'false\n'}
+</Text>
+*/
