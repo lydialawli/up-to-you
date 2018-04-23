@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View, Button, Image} from 'react-native'
+import { StyleSheet, Text, View, Button, Image, Dimensions} from 'react-native'
 import ImageHandler from './src/ImageHandler.js'
 
 
@@ -23,6 +23,8 @@ let coinProperties ={
     ],
   waitingCoinImage: require('./src/coin-img/coin-fliping.gif')
 }
+
+
 
 
 export default class App extends React.Component {
@@ -84,11 +86,26 @@ constructor(props)
     console.log(this.state.currentDiceImage)    
   }
 
+  getStyle=(isPortrait)=>
+  {
+    let flexDirectionNew = 'row'
+    if(isPortrait)
+      flexDirectionNew = 'column'
+
+    return {
+        flex: 1,
+        flexDirection: flexDirectionNew, 
+        backgroundColor: 'darksalmon',
+        alignItems: 'center',
+        justifyContent: 'space-around',
+    }
+  }
+
 
   render() {
 
     return (
-      <View  style = {styles.container}>    
+      <View  style = {this.getStyle(true)}>    
         <ImageHandler onPress= {this.onCoinPressed} image = {this.state.currentCoinImage} disabled = {this.state.disabled}/>
         <ImageHandler onPress= {this.onDicePressed} image = {this.state.currentDiceImage} disabled = {this.state.disabled}/>
       </View>
@@ -99,6 +116,7 @@ constructor(props)
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    flexDirection: 'row', 
     backgroundColor: 'darksalmon',
     alignItems: 'center',
     justifyContent: 'space-around',
