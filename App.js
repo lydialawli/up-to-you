@@ -122,10 +122,6 @@ constructor(props)
       <View  style = {this.getStyle(this.state.isPortrait)}>   
         <ImageHandler onPress= {this.onCoinPressed} image = {this.state.currentCoinImage} disabled = {this.state.disabled}/>
         <ImageHandler onPress= {this.onDicePressed} image = {this.state.currentDiceImage} disabled = {this.state.disabled}/>
-        <Text>
-          isPortrait = {ScreenOriented.isPortrait() ? 'true\n' : 'false\n'}
-          isLandscape = {ScreenOriented.isLandscape() ? 'true\n' : 'false\n'}
-        </Text>
       </View>
     )
   }
