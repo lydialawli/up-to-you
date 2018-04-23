@@ -2,10 +2,15 @@
   "expo": {
     "name": "UpToYou",
     "slug": "up-to-you",
-    "icon": "./src/app-icon.png",
+    "icon": "./src/app-icon-2.png",
     "sdkVersion": "25.0.0",
     "privacy": "public",
-    "description": "This may be one of the simplest apps you will find. It simply spins a coin or roles a dice for you :)\n I have an idea of adding a third object eventually. Feedback is more than welcomed."
+    "githubUrl": "https://github.com/lydialawli/up-to-you",
+    "splash": {
+      "image": "./src/splash.png",
+      "resizeMode": "cover"
+    },
+    "description": "It's a simple app that spins a coin or roles a dice for you, for now :)"
   },
 
   "android": {

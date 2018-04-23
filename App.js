@@ -99,7 +99,7 @@ constructor(props)
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'deepskyblue',
+    backgroundColor: 'darksalmon',
     alignItems: 'center',
     justifyContent: 'space-around',
   }
