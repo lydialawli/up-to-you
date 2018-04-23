@@ -5,7 +5,8 @@
     "icon": "./src/app-icon.png",
     "sdkVersion": "25.0.0",
     "privacy": "public",
-    "description": "If you can't decide something, let this app help you"
+    "description": "This may be one of the simplest apps you will find. It simply spins a coin or roles a dice for you :)
+    I have an idea of adding a third object eventually. Feedback is more than welcomed"
   },
 
   "android": {
