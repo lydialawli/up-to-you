@@ -23,9 +23,7 @@ let coinProperties ={
   waitingCoinImage: require('./src/coin-img/coin-fliping.gif')
 }
 
-
-
-
+  
 export default class App extends React.Component {
 
 constructor(props)
@@ -115,7 +113,6 @@ constructor(props)
     }
   }
 
-
   render() {
 
     return (
@@ -127,22 +124,3 @@ constructor(props)
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: 'row', 
-    backgroundColor: 'darksalmon',
-    alignItems: 'center',
-    justifyContent: 'space-around',
-  }
-})
-
-
-
-/*
-<Text>
-Dimensions = {JSON.stringify(Dimensions.get('screen'))}{'\n'}
-isPortrait = {ScreenOriented.isPortrait() ? 'true\n' : 'false\n'}
-isLandscape = {ScreenOriented.isLandscape() ? 'true\n' : 'false\n'}
-</Text>
-*/
