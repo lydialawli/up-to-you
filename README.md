@@ -6,15 +6,15 @@ You choose what is it for 😉
 
 
 ----
-## Original Notes to myself
+## Original Notes to myself (as a beginner in coding)
 
 - Find a practical exercice to practice my beginner coding skills
 - Setup a working space physically and virtually (Visual Studio Code, github repository, nice clean desk...)
 - Build an app that provides some value and launch it in a marketplace
 - Read Google Play Store requirements in their documentation
-- Stay lean, don't overcomplicate things
-- Do not leave with errors in the code
-- Setup a deadline
+- Stay __lean__, don't overcomplicate things
+- __No errors__ in the code before calling it a day
+- Setup a __deadline__
 
 
 ## Tools I used
