@@ -50,7 +50,7 @@ In the end... tadah! Mission accomplished, happy me. 🎉
 I want to work on a newer version of it, as it has a few things to improve for sure.
 But currently working on [Evok](https://github.com/lydialawli/Evok), my next mobile app after Up To You :)
 
-Comments and feedbacks are super appreciated 🙏🏻
+Comments and feedbacks are highly appreciated 🙏🏻
 
 
 
