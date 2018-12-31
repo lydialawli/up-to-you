@@ -43,7 +43,7 @@ I spent probably 10 minutes on the actual coding and 99% of my time just researc
 
 Good news is, there is so much information out there so just be specific when it comes to asking the questions in internet, so many people have already been through / asked the same thing...
 
-I originally had a very ambitious idea, and eventually I had to go simpler and simpler, since the goal was to launch an [MVP](https://www.forbes.com/sites/quora/2018/02/27/what-is-a-minimum-viable-product-and-why-do-companies-need-them/#d0a18af382ca); at some point I had to made a step back, breath and think through what was enough to become an app (basically I tried to avoid fancy features, that would just overcomplicate my life).
+I originally had a very ambitious idea, and eventually I had to go simpler and simpler, since the goal was to launch an [MVP](https://www.forbes.com/sites/quora/2018/02/27/what-is-a-minimum-viable-product-and-why-do-companies-need-them/#d0a18af382ca); at some point I had to make a step back, breath and think through what was enough to become an app (basically I tried to avoid fancy features, that would just overcomplicate my life).
 In the end... tadah! Mission accomplished, happy me. 🎉
 
 
