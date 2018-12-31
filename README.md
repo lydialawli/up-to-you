@@ -25,11 +25,11 @@ Go to [Google Play Store](https://play.google.com/store/apps/details?id=eth.uniw
 - [Codewars](https://www.codewars.com/) (super useful to train your coding skills)
 ### Tools I used
 - macbook Air 2011
-- [Visual Studio Code](https://code.visualstudio.com/)
+- [Visual Studio Code](https://code.visualstudio.com/) (where I write my code)
 - [Github](https://github.com/)
 - [Kraken](https://www.gitkraken.com/)
 - [React-native](https://facebook.github.io/react-native/) (framework for building native mobile apps with javascript)
-- [Vectr](https://vectr.com/) (free online vector software)
+- [Vectr](https://vectr.com/) (free online vector software. I used it to design the coin and the dice)
 - [Adobe Photoshop](https://www.adobe.com/products/photoshop.html)
 - A nice desk and a yoga ball
 
