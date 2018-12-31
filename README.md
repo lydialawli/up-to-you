@@ -1,4 +1,4 @@
-# UP TO YOU- My very first mobile app
+# __UP TO YOU__ - My very first mobile app
 
 This app does two very simple task for you, it either roles a dice or flips a coin.
 
