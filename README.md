@@ -39,18 +39,21 @@ Go to [Google Play Store](https://play.google.com/store/apps/details?id=eth.uniw
 
 Totally worth it, but very painful at times. 
 
-I spent probably 10 minutes on the actual coding and 99% of my time just researching and trying and failing. Total time spend: a month.
+I spent probably 10 minutes on the actual coding and 99% of my time just researching and trying and failing.
 
 Good news is, there is so much information out there so just be specific when it comes to asking the questions in internet, so many people have already been through / asked the same thing...
 
-I originally had a very ambitious idea, and eventually I had to go simpler and simpler, since the goal was to launch an [MVP](https://www.forbes.com/sites/quora/2018/02/27/what-is-a-minimum-viable-product-and-why-do-companies-need-them/#d0a18af382ca); at some point I had to make a step back, breath and think through what was enough to become an app (basically I tried to avoid fancy features, that would just overcomplicate my life).
-In the end... tadah! Mission accomplished, happy me. 🎉
+I originally had a very ambitious idea for this app, but as I was working on it, it made more sense to go simpler and simpler; since the goal was not to make _the ultimate revolutional super duper Coin and Dise app_, but to launch an [MVP](https://www.forbes.com/sites/quora/2018/02/27/what-is-a-minimum-viable-product-and-why-do-companies-need-them/#d0a18af382ca) instead.
+At some point I had to make a step back, breath and think through what was enough to become an app (basically I tried to avoid fancy features, that would just overcomplicate my life).
+
+One month later.. tadah! Mission accomplished, happy me. 🎉
+
 
 
 I want to work on a newer version of it, as it has a few things to improve for sure.
 But currently working on [Evok](https://github.com/lydialawli/Evok), my next mobile app after Up To You :)
 
-Comments and feedbacks are highly appreciated 🙏🏻
+__Comments and feedbacks__ regarding either this text or the app intself are __highly appreciated__ 🙏🏻
 
 
 
