@@ -18,8 +18,6 @@ const styles = StyleSheet.create({
 export default class PresentationalComponent extends React.Component {
     
     render(){
-        console.log("I am awesome, you are not")
-        
         return (
             <View style={styles.container}>
 
@@ -27,7 +25,7 @@ export default class PresentationalComponent extends React.Component {
                     title= {this.props.quote}
                     color= 'transparent'
                     onPress= {this.props.onPressed}>
-                    accessibilityLabel= 'lalala'
+                    
                 </Button>
     
                 <Text style={styles.textSmall}>
