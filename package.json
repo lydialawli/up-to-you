@@ -23,6 +23,6 @@
     "react": "16.2.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-25.0.0.tar.gz",
     "react-timer-mixin": "^0.13.3",
-    "tar": "^4.4.2"
+    "tar": "^4.4.18"
   }
 }
